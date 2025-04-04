@@ -1,0 +1,11 @@
+<div *ngIf="notes.length; else noNotes">
+  <ul>
+    <li *ngFor="let note of notes">
+      <strong>{{ note.title }}</strong> - {{ note.content }}
+    </li>
+  </ul>
+</div>
+<ng-template #noNotes>
+  <p>No notes found.</p>
+</ng-template>
+
