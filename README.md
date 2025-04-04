@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BlognotesFrontend
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# BlogNotesClient
+Angular frontend built to consume and manage BlogNotes API.
+>>>>>>> 9ccab1b74645b29ddf4cac93e101fef86ed5c09b
