@@ -1,11 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteDto, NoteService } from '../../services/note.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-note-list',
-  imports: [],
   templateUrl: './note-list.component.html',
-  styleUrl: './note-list.component.css'
+  styleUrls: ['./note-list.component.css'],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
+    ]
 })
 export class NoteListComponent implements OnInit {
   notes: NoteDto[] = [];

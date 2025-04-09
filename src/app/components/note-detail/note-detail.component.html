@@ -1,1 +1,11 @@
-<p>note-detail works!</p>
+<div *ngIf="note; else loading">
+  <h2>{{ note.title }}</h2>
+  <p>{{ note.content }}</p>
+  <small>{{ note.createdAt | date:'medium' }}</small>
+  <div>
+    <a [routerLink]="['/note/edit', note.id]">Edit Note</a>
+  </div>
+</div>
+<ng-template #loading>
+  <p>Loading note details...</p>
+</ng-template>

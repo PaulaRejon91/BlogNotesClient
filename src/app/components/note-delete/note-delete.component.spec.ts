@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NoteCreateComponent } from './NoteCreateComponent';
 
-describe('NoteCreateComponent', () => {
-  let component: NoteCreateComponent;
-  let fixture: ComponentFixture<NoteCreateComponent>;
+import { NoteDeleteComponent } from './note-delete.component';
+
+describe('NoteDeleteComponent', () => {
+  let component: NoteDeleteComponent;
+  let fixture: ComponentFixture<NoteDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NoteCreateComponent]
+      imports: [NoteDeleteComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NoteCreateComponent);
+    fixture = TestBed.createComponent(NoteDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
