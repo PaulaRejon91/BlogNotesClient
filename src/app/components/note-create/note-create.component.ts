@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteDto, NoteService } from '../../services/note.service';
+import { NoteService } from '../../services/note.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NoteDto } from '../../models/note.dto';
 
 @Component({
   selector: 'app-note-create',
