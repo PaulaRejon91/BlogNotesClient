@@ -1,20 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-export interface NoteDto {
-  id: number;
-  title: string;
-  content: string;
-  createdAt: Date;
-}
+import { NoteDto } from '../models/note.dto';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class NoteService {
-  private baseUrl = 'https://wa-blognotes-g9ebhxbuccgfgwbu.centralus-01.azurewebsites.net/Note/'
+  private baseUrl = 'https://localhost:7196/Note/'
 
   constructor(private http: HttpClient) { }
 
@@ -43,5 +37,3 @@ export class NoteService {
     return this.http.delete<void>(`${this.baseUrl}${id}`);
   }
 }
- 
-

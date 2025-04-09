@@ -35,7 +35,6 @@ export class NoteCreateComponent implements OnInit {
   onSubmit(): void {
     if (this.noteForm.valid) {
       const noteDto: NoteDto = {
-        id: 0,
         title: this.noteForm.value.title,
         content: this.noteForm.value.content,
         createdAt: this.noteForm.value.createdAt
