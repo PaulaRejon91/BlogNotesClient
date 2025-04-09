@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { NoteDto, NoteService } from '../../services/note.service';
+import { NoteService } from '../../services/note.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NoteDto } from '../../models/note.dto';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class NoteDetailComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.noteService.getNoteById(+id).subscribe({
+      this.noteService.getNoteById(id).subscribe({
         next: data => this.note = data,
         error: err => console.error('Error fetching note', err)
       });

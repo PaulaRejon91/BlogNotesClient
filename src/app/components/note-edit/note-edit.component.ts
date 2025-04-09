@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteDto, NoteService } from '../../services/note.service';
+import { NoteService } from '../../services/note.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NoteDto } from '../../models/note.dto';
 
 @Component({
   selector: 'app-note-edit',
@@ -18,7 +19,7 @@ import { CommonModule } from '@angular/common';
 
 export class NoteEditComponent implements OnInit{
   noteForm!: FormGroup;
-  noteId!: number;
+  noteId!: string;
   constructor(
     private noteService: NoteService, 
     private router: Router, 
@@ -27,7 +28,7 @@ export class NoteEditComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
-    this.noteId = +this.route.snapshot.params['id'];
+    this.noteId = this.route.snapshot.params['id'];
     this.noteForm = this.formGroup.group({
       id: [this.noteId],
       title: ['', Validators.required],

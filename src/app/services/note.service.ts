@@ -18,7 +18,7 @@ export class NoteService {
   }
 
   // Get note by id
-  getNoteById(id: number): Observable<NoteDto> {
+  getNoteById(id: string): Observable<NoteDto> {
     return this.http.get<NoteDto>(`${this.baseUrl}${id}`);
   }
 
@@ -33,7 +33,7 @@ export class NoteService {
   }
 
   // Delete note
-  deleteNoteById(id: number): Observable<void> {
+  deleteNoteById(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}${id}`);
   }
 }

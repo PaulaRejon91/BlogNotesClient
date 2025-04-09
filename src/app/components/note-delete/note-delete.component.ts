@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
 })
 
 export class NoteDeleteComponent implements OnInit {
-  noteId!: number;
+  noteId!: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +28,7 @@ export class NoteDeleteComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.noteId = +id; // Convierte el id de string a número
+      this.noteId = id; // Convierte el id de string a número
     }
   }
   DeleteNote(): void {
